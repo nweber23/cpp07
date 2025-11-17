@@ -1,4 +1,5 @@
 #include "iter.hpp"
+#include <iterator>
 
 template <typename T>
 void printElement(T& element) {
@@ -6,13 +7,13 @@ void printElement(T& element) {
 }
 
 int main(void) {
-  int intArray[] = {1, 2, 3, 4, 5};
+  int intArray[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   std::cout << "Iterating over intArray:" << std::endl;
-  iter(intArray, 5, printElement);
+  iter(intArray, std::size(intArray), printElement);
 
-  std::string strArray[] = {"Hello", "World", "from", "iter"};
+  std::string strArray[] = {"Hello", "World"};
   std::cout << "Iterating over strArray:" << std::endl;
-  iter(strArray, 4, printElement);
+  iter(strArray, std::size(strArray), printElement);
 
   return 0;
 }
