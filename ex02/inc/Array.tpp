@@ -8,7 +8,7 @@ Array<T>::Array() : elements(nullptr), _size(0) {}
 template <typename T>
 Array<T>::Array(unsigned int n) : elements(nullptr), _size(n) {
   if (n > 0)
-    elements = new T[n](); // value-initialize
+    elements = new T[n]();
 }
 
 template <typename T>
